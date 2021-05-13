@@ -1,1 +1,106 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$portfolio-primary: mat-palette($mat-cyan);
+$portfolio-accent: mat-palette($mat-yellow);
+
+// The warn palette is optional (defaults to red).
+$portfolio-warn: mat-palette($mat-red);
+
+$dark-primary: mat-palette($mat-indigo);
+$dark-accent: mat-palette($mat-blue-grey);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$portfolio-light-theme: mat-light-theme(
+  (
+    color: (
+      primary: $portfolio-primary,
+      accent: $portfolio-accent,
+      warn: $portfolio-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($portfolio-light-theme);
+
+$portfolio-dark-theme: mat-dark-theme(
+  (
+    color: (
+      primary: $dark-primary,
+      accent: $dark-accent,
+      warn: $portfolio-warn,
+    ),
+  )
+);
+.darkMode {
+  @include angular-material-theme($portfolio-dark-theme);
+}
+
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.flex-stretch {
+  flex: 1 0 auto;
+}
+
+mat-toolbar {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 255, 0.2);
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
+
+.sun {
+  color: #f4ee62;
+}
+
+.moon {
+  color: #000;
+}
+
+.header-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  margin-right: 2em;
+
+  a {
+    margin-right: 1.4em;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s;
+    border-radius: 20px;
+    text-transform: uppercase;
+  }
+  a:hover {
+    background-color: darken($color: #9be7ff, $amount: 0.5);
+    color: rgb(190, 189, 189);
+  }
+}
