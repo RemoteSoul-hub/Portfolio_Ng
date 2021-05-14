@@ -13,6 +13,13 @@ import { FormControl } from '@angular/forms';
       transition('void => *', [
         animate(850)
       ])
+    ]),
+    trigger('pop', [
+      state('void', style({ height: 0, width: 0})),
+
+      transition('void => *', [
+        animate(850)
+      ])
     ])
   ]
 })

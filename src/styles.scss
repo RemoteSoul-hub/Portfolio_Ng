@@ -11,15 +11,16 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$portfolio-primary: mat-palette($mat-blue, 600, 900, A900);
+$portfolio-primary: mat-palette($mat-blue, 300, 300, A900);
 $portfolio-accent: mat-palette($mat-yellow);
 
 // The warn palette is optional (defaults to red).
-$portfolio-warn: mat-palette($mat-red);
+$portfolio-warn: mat-palette($mat-indigo, 900, 900, A900);
 
-$dark-primary: mat-palette($mat-pink);
-$dark-accent: mat-palette($mat-blue);
+$dark-primary: mat-palette($mat-deep-purple, 700, 700, A900);
 
+$dark-accent: mat-palette($mat-cyan);
+$dark-warn: mat-palette($mat-yellow);
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
 $portfolio-light-theme: mat-light-theme(
@@ -69,7 +70,7 @@ $portfolio-dark-theme: mat-dark-theme(
     color: (
       primary: $dark-primary,
       accent: $dark-accent,
-      warn: $portfolio-warn,
+      warn: $dark-warn,
     ),
   )
 );
@@ -96,22 +97,11 @@ mat-toolbar {
   display: flex;
   align-items: center;
   box-shadow: 0 0.5rem 2rem rgba(0, 0, 2, 0.2);
-  position: fixed;
-  h2 {
-    font-size: 3em;
-  }
+  z-index: 9;
 }
 
 .mr-8 {
   margin-right: 8px;
-}
-
-.sun {
-  color: #f4ee62;
-}
-
-.moon {
-  color: #000;
 }
 
 .header-links {
@@ -129,7 +119,19 @@ mat-toolbar {
     text-transform: uppercase;
   }
   a:hover {
-    color: #000;
-    background-color: rgba($color: #7c7a7a, $alpha: 0.5);
+    background-color: rgba($color: #bbbaba, $alpha: 0.5);
   }
+}
+
+.spacer {
+  margin-top: 0.75%;
+  margin-left: 2%;
+}
+
+.toolbar-container {
+  margin-bottom: 5px;
+  top: 0;
+  position: sticky;
+  z-index: 1;
+  background-color: inherit;
 }

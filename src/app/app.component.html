@@ -1,8 +1,7 @@
-<div class="whole-content mat-app-background">
-<header>
+<div class="toolbar-container">
 <mat-toolbar color="primary">
   
-  <h2 class="mat-tab-link">!--Yahya Tahoune--!</h2>
+  <div class="spacer"><div class="mat-headline" @fade @pop>Yahya Tahoune</div></div>
   <div class="flex-stretch"></div>
   <div class="header-links mat-tab-link-container" @fade>
     <a href="#"><h3 class="mat-tab-link">Home</h3></a>
@@ -11,13 +10,12 @@
     <a routerLink="#"><h3 class="mat-tab-link">Full Project List</h3></a>
     <a href="#"><h3 class="mat-tab-link">Contact</h3></a>
   </div>
-  <mat-icon class="mr-8 sun">wb_sunny</mat-icon>
+  <mat-icon class="mr-8 sun" color="accent" @pop>wb_sunny</mat-icon>
   <mat-slide-toggle [formControl]="toggleControl" class="mr-8">
   </mat-slide-toggle>
-  <mat-icon class="mr-8 moon">bedtime</mat-icon>
+  <mat-icon class="mr-8 moon" color="warn" @pop>bedtime</mat-icon>
 </mat-toolbar>
-</header>
-<div class="content">
-    TEXT
 </div>
+<div class="mat-body-2 content mat-app-background">
+    TEXT MORE TEXT
 </div>
