@@ -1,8 +1,13 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import "~@angular/material/theming";
+@import "~mdb-angular-ui-kit/assets/scss/mdb.scss";
 // Plus imports for other components in your app.
-
+// Font Awesome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
@@ -128,9 +133,19 @@ mat-toolbar {
   margin-left: 2%;
 }
 .toolbar-container {
-  margin-bottom: 5px;
   top: 0;
   position: sticky;
   z-index: 1;
   background-color: inherit;
+}
+
+.home {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  .btn {
+    margin-left: 2em;
+  }
 }
