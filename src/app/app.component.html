@@ -1,7 +1,8 @@
+<div class="bg-container">
 <div class="toolbar-container">
 <mat-toolbar color="primary">
   
-  <div class="spacer"><div class="mat-headline" @fade @pop>Yahya Tahoune</div></div>
+<div class="mat-headline" @fade @pop>Yahya Tahoune</div>
   <div class="flex-stretch"></div>
   <div class="header-links mat-tab-link-container" @fade>
     <a href="#"><h3 class="mat-tab-link">Home</h3></a>
@@ -19,7 +20,8 @@
 <div class="mat-body-2 content mat-app-background">
   <div class="home">
     <div class="left-home">
-    <p class="mat-display-3" color="accent">TEXT MORE TEXT</p>
+    <p class="mat-display-3" @FlyInOut> <em color="primary">Hi I'm</em> Yahya.</p> 
+    <p class="mat-subheading-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nobis excepturi, libero quae vero in quos magni ullam repellendus eius recusandae quas ut iste fugiat molestias. Architecto labore cum minima?</p>
 <!-- Twitter -->
 <a class="btn btn-primary" style="background-color: #55acee;" href="#!" role="button"
   ><i class="fab fa-twitter"></i
@@ -32,9 +34,15 @@
 <a class="btn btn-primary" style="background-color: #333333;" href="#!" role="button"
   ><i class="fab fa-github"></i
 ></a>
+<br>
+<br>
+<div class="button-flex">
+<button mat-raised-button><i class="fas fa-phone"></i> Get in Touch!</button>
+<button mat-stroked-button> <> See My work</button>
+</div>
 </div>
 <div class="right-home">
-  <img src="../assets/selfie.svg" alt="">
+<img class="home-img" src="../assets/home.png" alt="" @fade>
 </div>
 </div>
 </div>

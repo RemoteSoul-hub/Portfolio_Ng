@@ -20,6 +20,13 @@ import { FormControl } from '@angular/forms';
       transition('void => *', [
         animate(850)
       ])
+    ]),
+    trigger('FlyInOut', [
+      state('in', style({ transform: 'translateX(0)' })),
+    transition('void => *', [
+      style({ transform: 'translateX(-100%)' }),
+      animate(1000)
+      ])
     ])
   ]
 })

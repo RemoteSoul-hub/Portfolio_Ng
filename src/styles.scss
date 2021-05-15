@@ -93,7 +93,6 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-
 .flex-stretch {
   flex: 1 0 auto;
 }
@@ -103,6 +102,7 @@ mat-toolbar {
   align-items: center;
   box-shadow: 0 0.5rem 2rem rgba(0, 0, 2, 0.2);
   z-index: 9;
+  margin: 0;
 }
 
 .mr-8 {
@@ -128,10 +128,6 @@ mat-toolbar {
   }
 }
 
-.spacer {
-  margin-top: 0.75%;
-  margin-left: 2%;
-}
 .toolbar-container {
   top: 0;
   position: sticky;
@@ -140,12 +136,47 @@ mat-toolbar {
 }
 
 .home {
-  margin-top: 10vh;
+  * {
+    margin-left: 20px;
+  }
+  em {
+    color: rgb(58, 86, 138);
+  }
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  height: 100%;
+  background: url(./assets/star-bg.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   .btn {
     margin-left: 2em;
+  }
+  img {
+    width: 60vw;
+    height: 90vh;
+  }
+}
+
+.button-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  .mat-raised-button {
+    height: 50px;
+    font-size: 1.2em;
+  }
+
+  .mat-stroked-button {
+    height: 50px;
+    font-size: 1.2em;
   }
 }
