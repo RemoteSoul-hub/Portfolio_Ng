@@ -16,7 +16,7 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$portfolio-primary: mat-palette($mat-blue, 300, 300, A900);
+$portfolio-primary: mat-palette($mat-deep-purple, 300, 300, A300);
 $portfolio-accent: mat-palette($mat-yellow);
 
 // The warn palette is optional (defaults to red).
@@ -136,11 +136,8 @@ mat-toolbar {
 }
 
 .home {
-  * {
-    margin-left: 20px;
-  }
   em {
-    color: rgb(58, 86, 138);
+    color: rgb(250, 231, 60);
   }
   position: absolute;
   top: 0;
@@ -152,7 +149,7 @@ mat-toolbar {
   justify-content: space-around;
   align-items: center;
   height: 100%;
-  background: url(./assets/star-bg.png) no-repeat center center fixed;
+  background: url(./assets/bg-home.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -179,4 +176,18 @@ mat-toolbar {
     height: 50px;
     font-size: 1.2em;
   }
+}
+
+.social-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.left-home {
+  padding: 20px;
+}
+
+.title-spacer {
+  margin-top: 0.75em;
 }
