@@ -136,9 +136,6 @@ mat-toolbar {
 }
 
 .home {
-  em {
-    color: rgb(250, 231, 60);
-  }
   position: absolute;
   top: 0;
   right: 0;
@@ -186,8 +183,286 @@ mat-toolbar {
 
 .left-home {
   padding: 20px;
+  p {
+    margin-left: 50px;
+  }
+  h1 {
+    margin-left: 28%;
+    font-size: 2.5em;
+    font-weight: bold;
+  }
 }
 
 .title-spacer {
   margin-top: 0.75em;
+}
+
+.ac-animated-svg-icon {
+  /*icon - size*/
+  width: 45vw;
+  padding-bottom: 300px;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  height: 0;
+}
+.ac-animated-svg-icon .ac-animated-svg-icon-contents {
+  position: absolute;
+  /* icon - padding */
+  left: 20px;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+}
+.ac-animated-svg-cup {
+  position: relative;
+  width: 30vw;
+  height: 80vh;
+  left: 10%;
+  bottom: 80%;
+}
+.ac-animated-svg-cup .svg-cup {
+  padding-top: 20%;
+  padding-bottom: 4%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 100%;
+}
+.ac-animated-svg-cup .svg-steamline {
+  height: 15%;
+  position: absolute;
+  left: 50%;
+  opacity: 0;
+  z-index: 0;
+}
+.ac-animated-svg-cup .svg-steamline-1 {
+  top: 2%;
+  left: 15%;
+}
+.ac-animated-svg-cup .svg-steamline-2 {
+  top: 6%;
+  left: 35%;
+}
+
+.ac-animated-svg-cup .svg-steamline-3 {
+  top: 3%;
+  left: 55%;
+}
+
+.ac-animated-svg-icon:hover .ac-animated-svg-cup .svg-steamline-1,
+.ac-animated-svg-icon.ac-svg-animated .ac-animated-svg-cup .svg-steamline-1 {
+  animation: acAnimatedSvgIconAnimation1 2s ease-out infinite;
+}
+
+@keyframes acAnimatedSvgIconAnimation1 {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 0;
+    top: 40%;
+  }
+  70% {
+    opacity: 1;
+    top: 1%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.ac-animated-svg-icon:hover .ac-animated-svg-cup .svg-steamline-2,
+.ac-animated-svg-icon.ac-svg-animated .ac-animated-svg-cup .svg-steamline-2 {
+  animation: acAnimatedSvgIconAnimation2 1.8s ease-out infinite;
+}
+
+@keyframes acAnimatedSvgIconAnimation2 {
+  0% {
+    opacity: 0;
+  }
+
+  1% {
+    opacity: 0;
+    top: 40%;
+  }
+
+  70% {
+    opacity: 1;
+    top: 5%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.ac-animated-svg-icon:hover .ac-animated-svg-cup .svg-steamline-3,
+.ac-animated-svg-icon.ac-svg-animated .ac-animated-svg-cup .svg-steamline-3 {
+  animation: acAnimatedSvgIconAnimation3 2.2s ease-out infinite;
+}
+
+@keyframes acAnimatedSvgIconAnimation3 {
+  0% {
+    opacity: 0;
+  }
+
+  1% {
+    opacity: 0;
+    top: 40%;
+  }
+
+  70% {
+    opacity: 1;
+    top: 2%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.ac-animated-svg-cup .svg-dot {
+  height: 5%;
+  position: absolute;
+  left: 50%;
+  opacity: 0;
+  z-index: 0;
+}
+.ac-animated-svg-cup .svg-dot-1 {
+  left: 50%;
+  top: 2%;
+  transform: translateX(5px);
+}
+.ac-animated-svg-cup .svg-dot-2 {
+  left: 35%;
+  top: 10%;
+  transform: translateX(5px);
+}
+.ac-animated-svg-cup .svg-dot-3 {
+  left: 35%;
+  top: 1%;
+  transform: translateX(-10px);
+}
+.ac-animated-svg-cup .svg-dot-4 {
+  left: 20%;
+  top: 10%;
+  transform: translateX(-5px);
+}
+
+.ac-animated-svg-icon:hover .ac-animated-svg-cup .svg-dot-1,
+.ac-animated-svg-icon.ac-svg-animated .ac-animated-svg-cup .svg-dot-1 {
+  animation: acAnimatedSvgIconDotAnimation1 2.1s ease-out infinite;
+}
+
+@keyframes acAnimatedSvgIconDotAnimation1 {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.ac-animated-svg-icon:hover .ac-animated-svg-cup .svg-dot-2,
+.ac-animated-svg-icon.ac-svg-animated .ac-animated-svg-cup .svg-dot-2 {
+  animation: acAnimatedSvgIconDotAnimation2 1.9s ease-out infinite;
+}
+
+@keyframes acAnimatedSvgIconDotAnimation2 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.ac-animated-svg-icon:hover .ac-animated-svg-cup .svg-dot-3,
+.ac-animated-svg-icon.ac-svg-animated .ac-animated-svg-cup .svg-dot-3 {
+  animation: acAnimatedSvgIconDotAnimation3 2.5s ease-out infinite;
+}
+
+@keyframes acAnimatedSvgIconDotAnimation3 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.ac-animated-svg-icon:hover .ac-animated-svg-cup .svg-dot-4,
+.ac-animated-svg-icon.ac-svg-animated .ac-animated-svg-cup .svg-dot-4 {
+  animation: acAnimatedSvgIconDotAnimation4 2.3s ease-out infinite;
+}
+
+@keyframes acAnimatedSvgIconDotAnimation4 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.ac-animated-svg-cup .svg-shadow {
+  position: absolute;
+  width: 20vw;
+  left: 3%;
+  bottom: 5%;
+  display: none;
+}
+.ac-animated-svg-icon.ac-svg-shadow .ac-animated-svg-cup .svg-shadow {
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #642c7e;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #793e94;
+}
+
+.mat-body-2 {
+  font-size: 1.2em;
 }
