@@ -89,26 +89,31 @@ html,
 body {
   height: 100%;
 }
-body {
+body section {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
 }
 .flex-stretch {
   flex: 1 0 auto;
 }
-
+.toolbar-container {
+  z-index: 99;
+}
 mat-toolbar {
   display: flex;
   align-items: center;
   box-shadow: 0 0.5rem 2rem rgba(0, 0, 2, 0.2);
-  z-index: 9;
   margin: 0;
 }
 
 .mr-8 {
   margin-right: 8px;
 }
-
+.content {
+  margin: 0;
+  min-height: 90vh;
+}
 .header-links {
   display: flex;
   flex-direction: row;
@@ -144,6 +149,7 @@ mat-toolbar {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-top: 0;
   align-items: center;
   height: 100%;
   background: url(./assets/bg-home.png) no-repeat center center fixed;
@@ -190,6 +196,7 @@ mat-toolbar {
     margin-left: 28%;
     font-size: 2.5em;
     font-weight: bold;
+    text-shadow: 1px 1px 2px black;
   }
 }
 
@@ -222,6 +229,7 @@ mat-toolbar {
   height: 80vh;
   left: 10%;
   bottom: 80%;
+  z-index: 0;
 }
 .ac-animated-svg-cup .svg-cup {
   padding-top: 20%;
@@ -465,4 +473,41 @@ mat-toolbar {
 
 .mat-body-2 {
   font-size: 1.2em;
+}
+
+.skills {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  // background: no-repeat center center fixed;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
+  .home-img {
+    height: 85vh;
+  }
+  .skill-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
+    p {
+      text-align: center;
+      text-shadow: 2px 2px 5px rgb(124, 123, 123);
+    }
+    .skill-slot {
+      background-color: rgba($color: #ffffff, $alpha: 0.08);
+      border-radius: 20px;
+    }
+  }
 }
