@@ -196,7 +196,7 @@ mat-toolbar {
     margin-left: 28%;
     font-size: 2.5em;
     font-weight: bold;
-    text-shadow: 1px 1px 2px black;
+    text-shadow: 1px black;
   }
 }
 
@@ -510,4 +510,17 @@ mat-toolbar {
       border-radius: 20px;
     }
   }
+}
+
+.featured {
+  height: 100vh;
+  background-color: #7451ac;
+}
+
+.featured-title {
+  text-align: center;
+}
+
+.svg-wave {
+  padding: 0;
 }
