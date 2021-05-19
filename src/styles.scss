@@ -200,6 +200,13 @@ mat-toolbar {
   }
 }
 
+.right-home {
+  padding: 10px;
+  img {
+    margin-right: 40px;
+  }
+}
+
 .title-spacer {
   margin-top: 0.75em;
 }
@@ -513,7 +520,7 @@ mat-toolbar {
 }
 
 .featured {
-  height: 100vh;
+  height: auto;
   background-color: #7451ac;
 }
 
@@ -523,4 +530,18 @@ mat-toolbar {
 
 .svg-wave {
   padding: 0;
+}
+
+.pj-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  img {
+    width: 50vw;
+    padding: 10px;
+  }
+}
+
+.btn-center {
+  align-items: center;
 }
