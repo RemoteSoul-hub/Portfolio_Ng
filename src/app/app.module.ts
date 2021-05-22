@@ -10,10 +10,14 @@ import  { MdbModule } from 'mdb-angular-ui-kit';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AllProjectsComponent } from './components/all-projects/all-projects.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AllProjectsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MatButtonModule,
     MdbModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
